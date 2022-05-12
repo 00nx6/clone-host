@@ -1,0 +1,129 @@
+.menuToggle {
+  width: max-content;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+  height: 200vh;
+  display: block;
+  position: fixed;
+  top: .5rem;
+  right: .5rem;
+}
+
+.menuToggle .checkbox {
+  width: 4rem;
+  height: 3.2rem;
+  cursor: pointer;
+  z-index: 2;
+  -webkit-touch-callout: none;
+  display: block;
+  position: absolute;
+  top: .5rem;
+  right: 1rem;
+}
+
+.menuToggle .patty {
+  width: 3.3rem;
+  height: .4rem;
+  transform-origin: 4px 0;
+  background: tomato;
+  margin-bottom: .5rem;
+  transition: transform .5s cubic-bezier(.77, .2, .05, 1), background .5s cubic-bezier(.77, .2, .05, 1), opacity .55s;
+  display: block;
+  position: relative;
+  top: 1rem;
+  left: -1rem;
+}
+
+.menuToggle .patty:first-child {
+  transform-origin: 0 0;
+}
+
+.menuToggle .patty:nth-last-child(2) {
+  transform-origin: 0 100%;
+}
+
+.menuToggle .checkbox:checked ~ .patty {
+  opacity: 1;
+  background: #232323;
+  transform: rotate(45deg)translate(-2px, -1px);
+}
+
+.menuToggle .checkbox:checked ~ .patty:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg)scale(.2);
+}
+
+.menuToggle .checkbox:checked ~ .patty:nth-last-child(2) {
+  transform: rotate(-45deg)translate(0, -1px);
+}
+
+.menuToggle .navCont {
+  height: 50vh;
+  width: 100vw;
+  z-index: -1;
+  background-color: #f3ab4dcc;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20%;
+  font-family: Ubuntu;
+  transition: transform 1s;
+  display: flex;
+  position: absolute;
+  top: -.5rem;
+  right: -.5rem;
+  transform: translate(0, -100%);
+}
+
+.menuToggle .navCont .navItem {
+  list-style-type: none;
+}
+
+.menuToggle .navCont .navItem .navLink {
+  text-decoration: none;
+}
+
+.menuToggle .checkbox:checked ~ .navCont {
+  transform: translate(0);
+}
+
+.hidden {
+  opacity: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+svg {
+  display: block;
+}
+
+html, body {
+  font-size: .625em;
+}
+
+body {
+  min-width: 32rem;
+  font-size: 16px;
+}
+
+input[type="text"], input[type="email"], input[type="password"], input[type="number"], textarea {
+  appearance: none;
+  border-radius: 0;
+}
+
+/*# sourceMappingURL=index.4c98bae3.css.map */
